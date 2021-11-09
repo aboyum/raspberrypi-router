@@ -1,7 +1,7 @@
 # raspberrypi Cisco-like router
 How to make a Cisco like Linux router
 
-All regular linux distributions may install FRRouting effektivly making the computer a advanced router. Many professional "white box routers" such as nvidia's hi-end routers and switches supports FRR, so does Ubuntu, pfsense, Raspberry Pi and many others.
+All regular linux distributions may install FRRouting, effektivly making the computer a advanced router. Many professional "white box routers" such as nvidia's upto 400gbit hi-end routers and switches supports FRR. nvidia SONiC has a version of FRR. Many other regular linux version such as Ubuntu, pfsense, Raspberry Pi and many others does support FRR as well.
 
 Raspbery Pi 3 contains of 2 networking interfaces. One 2.4 GHz wifi (wlan0) and one 1gbit ethernet interfacce that uses USB2 (eth0) with teoretical 480mbit speed.
 In this example wifi0 will be the outside port, with dhcp client. While eth0 will be "LAN side" with a dhcp server.
@@ -111,4 +111,12 @@ and uncomment, or remove, the “#” in front of `AUTOSTART="all"`
 
 The most common OpenVPN (at present 2021) is version 2.4. Many OpenVPN server such as pfsense has got to version 2.5. You may have to mark "support for 2.4" in your server.
 
-A sucessful OpenVPN connecteion adds another interface `tun0`, you may add that to your router configuration as well.
+A sucessful OpenVPN connecteion adds a tunnel interface `tun0`, you may add that to your router configuration as well.
+
+## Links
+- [FRRouting](https://frrouting.org/)
+- [FRRouting documentation](http://docs.frrouting.org/en/latest/)
+- [RaspberryPi](https://www.raspberrypi.com/)
+- [nvidia switches](https://www.nvidia.com/en-us/networking/)
+
+
