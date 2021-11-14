@@ -41,7 +41,7 @@ write mem
 However it may be better to 
 manually adjust the ip directly in the operating system.
 
-This is configuration static ipdirecly in linux (not in frr):
+This is configuration for static configure ip direcly in linux (not in frr):
 ```
 sudo nano /etc/dhcpcd.conf
 interface eth0
@@ -87,6 +87,7 @@ domain-needed
 bogus-priv
 dhcp-range=192.168.1.100,192.168.1.200,255.255.255.0,12h
 ```
+To view leases: 'cat /var/lib/misc/dnsmasq.leases'
 ## OpenVPN client
 You may make a OpenVPN connection to encrypt you traffic. You may have a openvpn server at your main location and a Raspberry Pi at a remote location.
 Here is how to make a OpenVPN client
